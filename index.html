@@ -540,7 +540,7 @@
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
         </button>
-        <h4 class="modal-prg">Leave your contacts and we will call you back</h4>
+        <p class="modal-prg">Leave your contacts and we will call you back</p>
         <form class="modal-form">
           <div class="form_element">
             <label class="element_label" for="user-name">Name</label>
@@ -557,7 +557,7 @@
             </div>
           </div>
           <div class="form_element">
-            <label class="element_label" for="number">Phone</label>
+            <label class="element_label" for="user-phone">Phone</label>
             <div class="input-icon-container">
               <input class="input_form" type="tel" name="phone" id="phone" />
 
@@ -569,7 +569,12 @@
           <div class="form_element">
             <label class="element_label" for="email">Email </label>
             <div class="input-icon-container">
-              <input class="input_form" type="text" name="email" id="email" />
+              <input
+                class="input_form"
+                type="text"
+                name="email"
+                id="user-email"
+              />
 
               <svg class="icon_form" width="18" height="24">
                 <use href="./images/icons.svg#icon-email-black"></use>
@@ -588,7 +593,7 @@
           </div>
           <div class="privacy-checkbox">
             <input
-              class="visually-hidden"
+              class="modal-checkbox-form visually-hidden"
               type="checkbox"
               name="user-privacy"
               value="true"
