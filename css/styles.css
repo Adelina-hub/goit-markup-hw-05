@@ -206,20 +206,55 @@ color:#434455;
     background-color: #2E2F4266;
     visibility: hidden;
     z-index: 999;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-container {
     position:absolute;
     background-color: #FCFCFC;
-margin:80px 500px 8px 630px;
+    margin:80px 500px 8px 630px;
     transform: translate(-50% -50%);
     width:408px;
-    height:584px;
+    min-height:584px;
+    top:50%;
+    left:50%; 
+    border-radius: 4px;
+    box-shadow:0px 1px 1px rgba(0, 0, 0, 0.14),0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2) ;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 .modal-backdrop.is-open {
     visibility: initial;
 }
+.btn-close-modal {
+    position: absolute;
+    top:24px;
+    right:24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e9fc;
+    border:1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.btn-close-modal:hover {
+    background-color: #404bbf;
+    border: none;
+    fill:fill: #ffffff;
+}
+.btn-close-modal:focus {
+    background-color: #404bbf;
+    border: none;
+    fill:#ffffff;
+}
 .modal-prg {
-    width: 360px;
+    /* width: 360px;
         height: 24px;
         top: 152px;
         left: 540px;
@@ -232,7 +267,21 @@ margin:80px 500px 8px 630px;
             letter-spacing: 0.02em;
             text-align: center;
             color:#2E2F42;
-            padding-left: 20px;
+            padding-left: 20px; */
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            text-align: center;
+            color: #2E2F42;
+            margin-top: 62px;
+            margin-bottom: 16px;
+
+
+}
+.icon-to-close {
+    fill:#2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 .modal-sub {
     min-width:169px;
@@ -299,8 +348,9 @@ margin:80px 500px 8px 630px;
     width:360px;
     height: 40px;
     outline:transparent;
-    padding-left: 36px;
+    padding-left: 38px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: transparent;
 }
 .comment_element {
     margin-bottom: 16px;
@@ -317,9 +367,30 @@ margin:80px 500px 8px 630px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     resize: none;
+    color:rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.input_textarea:focus {
+    border-color: #4D5AE5;
 }
 .privacy-checkbox {
     margin-bottom: 24px;
+}
+.privacy-check-box {
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        fill: transparent;
 }
 .visually-hidden {
     position: absolute;
@@ -341,9 +412,7 @@ margin:80px 500px 8px 630px;
         letter-spacing: 0.04em;
         color:#8e8f99;
 }
-.privacy-check-box{
 
-}
 .privacy_terms {
         font-family:"Roboto", sans-serif;
         font-size: 12px;
@@ -746,6 +815,9 @@ background-color: #FFFFFF;
         max-width:264px ;
     
 }
+.form_icon_footer {
+    margin-left: 16px;
+}
 .footer-form {
     width: 453px;
     height: 80px ;
@@ -768,7 +840,8 @@ background-color: #FFFFFF;
             line-height: 24px;
             letter-spacing: 0.02em;
             text-align: left;
-            color:#FFFFFF
+            color:#FFFFFF;
+            margin-bottom: 16px;
 }
 .footer_input {
     font-family: Roboto;
@@ -776,24 +849,25 @@ background-color: #FFFFFF;
         font-weight: 400;
         line-height: 24px;
         letter-spacing: 0.04em;
-        text-align: left;
+    color: #ffffff;
     width: 264px;
         height: 40px;
         top: 140px;
         left: 828px;
         gap: 0px;
-        border-radius: 4px 0px 0px 0px;
+       border-radius: 4px;
         opacity: 0px;
         background-color: transparent;
         border: 1px solid #fff;
         padding-left: 16px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .form-button {
     display: flex;
     justify-content: center;
     align-items: center;
     gap:16px;
-    width: 165px;
+    min-width: 165px;
     height: 40px;
     background-color: #4D5AE5;
         font-family: "Roboto",sans-serif;
