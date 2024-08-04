@@ -32,11 +32,16 @@
       <div class="header-container container">
         <nav class="header-nav">
           <a href="./index.html" class="logo"
-            ><span style="color: #2e2f42"></span> WebStudio</a
+            ><span style="color: #2e2f42">web</span> Studio</a
           >
           <ul class="header-list">
             <li class="header-item">
-              <a href="./index.html" class="header-link studio">Studio</a>
+              <a
+                href="./index.html"
+                class="header-link studio"
+                style="color: #404bbf"
+                >Studio</a
+              >
             </li>
             <li class="header-item">
               <a href="" class="header-link">Portfolio</a>
@@ -503,18 +508,28 @@
             </li>
           </ul>
         </div>
-        <div>
-          <label
-            >Subscribe
-            <input type="email" name="" placeholder="E-mail" />
-          </label>
+        <div class="footer-form">
+          <p class="form-pr">Subscribe</p>
+          <form class="subscrition-form">
+            <label for="email">
+              <input
+                class="footer_input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+                required
+              />
+            </label>
+
+            <button class="form-button" type="submit">
+              Subscribe
+              <svg class="form-icon-footer" width="24" height="24">
+                <use href="./images/icons.svg#icon-Frame-3"></use>
+              </svg>
+            </button>
+          </form>
         </div>
-        <button type="submit">
-          Subscribe
-          <svg width="24" height="24">
-            <use href="./images/icons.svg#icon-Frame-3"></use>
-          </svg>
-        </button>
       </div>
     </footer>
 
@@ -525,7 +540,66 @@
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
         </button>
-        <h4>Leave your contacts and we will call you back</h4>
+        <h4 class="modal-prg">Leave your contacts and we will call you back</h4>
+        <form class="modal-form">
+          <div class="form_element">
+            <label class="element_label" for="name">Name</label>
+            <div class="input-icon-container">
+              <input class="input_form" type="text" name="name" id="name" />
+              <svg class="icon_form" width="18" heigh="18">
+                <use href="./images/icons.svg#icon-person-black"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form_element">
+            <label class="element_label" for="number">Phone</label>
+            <div class="input-icon-container">
+              <input class="input_form" type="tel" name="phone" id="phone" />
+
+              <svg class="icon_form" width="18" heigh="18">
+                <use href="./images/icons.svg#icon-phone-black"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form_element">
+            <label class="element_label" for="email">Email </label>
+            <div class="input-icon-container">
+              <input class="input_form" type="text" name="email" />
+
+              <svg class="icon_form" width="18" heigh="18">
+                <use href="./images/icons.svg#icon-email-black"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="comment_element">
+            <label class="element_label" for="comment">Comment</label>
+            <textarea
+              class="input_textarea"
+              name="comment"
+              id=""
+              rows="5"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="privacy-checkbox">
+            <input
+              class="visually-hidden"
+              type="checkbox"
+              name="privacy-terms"
+            />
+            <label class="privacy-policy-title" for="privacy-policy">
+              <span class="privacy-check-box">
+                <svg width="10" height="8">
+                  <use href="./images/icons.svg#icon-close-black"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+
+              <a href="Privacy Policy" class="privacy_terms">Privacy Policy</a>
+            </label>
+          </div>
+          <button class="modal-sub" type="submit">Send</button>
+        </form>
       </div>
     </div>
     <script src="./index.js"></script>
