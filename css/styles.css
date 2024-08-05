@@ -310,10 +310,10 @@ color:#434455;
 .input-icon-container {
     position: relative;
 }
-.imput_form:hover
+
 
 .icon_form {
-    position: absolute;
+    /* position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
@@ -321,11 +321,11 @@ color:#434455;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    flex-direction: row;
+    flex-direction: row; 
     gap:4px;
     width:18px;
     height: 24px;
-    fill:#2e2f42;
+    fill:#2e2f42; */
     
 }
 
@@ -351,6 +351,15 @@ color:#434455;
     padding-left: 38px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: transparent;
+}
+.icon_form {
+    position: absolute;
+    display: flex;
+    left:16px;
+    top:50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .input_form:focus,
 .input_form:hover
